@@ -21,7 +21,7 @@
         	到着までしばらくお待ち下さい。
         	ご利用ありがとうございました。
         </Say>
-        <Sms from="+1XXXXXXXXXX" to="<?php echo $callFrom; ?>">URLをお送りしております。 twilio.kddi-web.com</Sms>
+        <Sms from="+1XXXXXXXXXX" to="<?php echo htmlspecialchars($callFrom, ENT_QUOTES, 'UTF-8'); ?>">URLをお送りしております。 twilio.kddi-web.com</Sms>
         <Hangup/>
       </Response>
 <?php } else { ?>
